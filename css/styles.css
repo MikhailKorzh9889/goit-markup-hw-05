@@ -604,6 +604,12 @@ height: 100%;
 background-color: rgba(46, 47, 66, 0.4);
 backdrop-filter: blur(6px);
 }
+.backdrop.is-hidden{
+opacity: 0;
+visibility: hidden;
+pointer-events: none;
+backdrop-filter: blur(0);
+}
 .modal{
 position: absolute;
 top: calc(50% - 288px);
