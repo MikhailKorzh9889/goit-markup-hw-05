@@ -68,6 +68,7 @@ list-style: none;
 }
 .link {
 text-decoration: none;
+transition-property: color;
 }
 button {
 font-family: inherit;
@@ -166,6 +167,7 @@ padding-top: 24px;
 padding-bottom: 24px;
 transition-duration: 250ms;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+transition-property: color;
 }
 .menu-link::after{
 content: "";
@@ -180,9 +182,7 @@ border-radius: 2px;
 .menu-link.current{
 color: var(--accent-color);
 }
-.menu-link.current::after,
-.menu-link:hover::after,
-.menu-link:focus::after{
+.menu-link.current::after{
 background-color: var(--accent-color);
 }
 
@@ -219,6 +219,7 @@ padding-top: 24px;
 padding-bottom: 24px;
 transition-duration: 250ms;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+transition-property: color;
 }
 .address-list {
 display: flex;
@@ -373,19 +374,28 @@ padding: 32px 0;
 border-radius: 0px 0px 4px 4px;
 }
 .social-list{
-    display: flex;
-    justify-content: center;
-    gap: 24px;
+display: flex;
+justify-content: center;
+gap: 24px;
+}
+.social-item{
+width: 40px;
+height: 40px;
+}
+.social-media-item{
+width: 40px;
+height: 40px;
 }
 .social-link{
 display: flex;
 justify-content: center;
 align-items: center;
-width: 40px;
-height: 40px;
+width: 100%;
+height: 100%;
 
 background-color: var(--social-link-bg);
 border-radius: 50%;
+transition-property: backgroud-color;
 transition-duration: 250ms;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -425,6 +435,7 @@ height: 88px;
 border: 1px solid #8E8F99;
 border-radius: 4px;
 color: var(--client-icon-cl);
+transition-property: color, border-color;
 transition-duration: 250ms;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -445,7 +456,6 @@ padding: 100px 0;
 .footer-content{
 display: flex;
 align-items: baseline;
-gap: 120px;
 }
 .footer-text {
 font-size: 16px;
@@ -453,6 +463,9 @@ line-height: 1.5;
 letter-spacing: 0.02em;
 color: var(--color-cloud);
 width: 264px;
+}
+.footer-left{
+margin-right: 120px;
 }
 .social-media-text{
 font-weight: 500;
@@ -471,10 +484,11 @@ gap: 16px;
 display: flex;
 align-items: center;
 justify-content: center;
-width: 40px;
-height: 40px;
+width: 100%;
+height: 100%;
 background-color:var(--footer-icon-bg);
 border-radius: 50%;
+transition-property: color;
 transition-duration: 250ms;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -516,7 +530,7 @@ cursor: pointer;
 
 border: 1px solid #E7E9FC;
 border-radius: 4px;
-transition-property: color, background-color;
+transition-property: color, background-color, border-color, box-shadow;
 transition-duration: 250ms;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -560,6 +574,9 @@ border-top: none;
 }
 .portfolio-link{
 display: block;
+transition-property: box-shadow;
+transition: transform 250ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-link:hover,
 .portfolio-link:focus{
